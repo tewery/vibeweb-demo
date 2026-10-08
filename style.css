@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0d0d0f;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   ОБЩЕЕ
+========================= */
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 8%;
+    position: relative;
+}
+
+.label {
+    color: #ff6b8a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: clamp(40px, 6vw, 75px);
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.text {
+    max-width: 650px;
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #35151f 0%,
+            #160c10 35%,
+            #0d0d0f 70%
+        );
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-title {
+    color: #ff6b8a;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 9vw, 120px);
+    line-height: .9;
+    letter-spacing: -7px;
+}
+
+.hero h1 span {
+    color: #ff6b8a;
+}
+
+.subtitle {
+    max-width: 600px;
+    margin: 35px auto;
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero button {
+    border: none;
+    background: white;
+    color: #111;
+    padding: 18px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.hero button:hover {
+    transform: translateY(-5px);
+    background: #ff6b8a;
+    color: white;
+    box-shadow: 0 15px 40px rgba(255, 107, 138, .25);
+}
+
+.scroll {
+    position: absolute;
+    bottom: 35px;
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+    background: #111113;
+}
+
+.story-card {
+    max-width: 900px;
+
+    display: flex;
+    gap: 30px;
+
+    margin-top: 25px;
+    padding: 35px;
+
+    border: 1px solid #27272b;
+    border-radius: 25px;
+
+    background: rgba(255,255,255,.02);
+
+    transition: .3s;
+}
+
+.story-card:hover {
+    transform: translateX(10px);
+    border-color: #ff6b8a;
+}
+
+.number {
+    color: #ff6b8a;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.story-card h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.story-card p {
+    color: #888;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PHOTOS
+========================= */
+
+.photos {
+    background: #0d0d0f;
+}
+
+.photo-grid {
+    margin-top: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.photo {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 25px;
+    background: #18181b;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .6s;
+}
+
+.photo:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #32141e,
+            #0d0d0f 65%
+        );
+}
+
+.letter-box {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 80px;
+
+    border: 1px solid #35252a;
+    border-radius: 35px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,.03);
+    backdrop-filter: blur(15px);
+}
+
+.letter-text {
+    color: #999;
+    font-size: 18px;
+    line-height: 1.8;
+
+    max-width: 600px;
+    margin: 35px auto;
+}
+
+.love {
+    color: #ff6b8a;
+    font-size: clamp(35px, 5vw, 65px);
+    font-weight: bold;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: #0d0d0f;
+}
+
+.final h2 {
+    margin-bottom: 25px;
+}
+
+.final p {
+    color: #888;
+    font-size: 18px;
+}
+
+.big-heart {
+    font-size: 100px;
+    margin: 50px 0;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+.final small {
+    color: #555;
+}
+
+
+/* =========================
+   СЕРДЕЧКИ
+========================= */
+
+.hearts {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 100;
+}
+
+.hearts span {
+    position: absolute;
+
+    bottom: -50px;
+
+    color: #ff6b8a;
+
+    font-size: 20px;
+
+    animation: floatUp linear forwards;
+
+    opacity: .8;
+}
+
+
+/* =========================
+   АНИМАЦИИ
+========================= */
+
+@keyframes floatUp {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(40deg);
+
+        opacity: 0;
+    }
+
+}
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.12);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================
+   ТЕЛЕФОН
+========================= */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 80px 6%;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        height: 420px;
+    }
+
+    .story-card {
+        padding: 25px;
+    }
+
+    .letter-box {
+        padding: 45px 25px;
+    }
+
+}
